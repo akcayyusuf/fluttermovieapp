@@ -180,7 +180,7 @@ class HomeState extends State<Home> {
 
   void getdata(String ara) async {
     http
-        .get("http://www.omdbapi.com/?s=${ara.trimRight()}&apikey=9792ea93")
+        .get("http://www.omdbapi.com/?s=${ara.trimRight()}&apikey=SECRET API KEY")
         .then((answer) {
       var data = jsonDecode(answer.body)['Search'] as List;
       tagObjs = data.map((tagJson) => Movie.fromJson(tagJson)).toList();
